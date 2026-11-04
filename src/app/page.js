@@ -3,6 +3,7 @@ import Marquee from "./components/Marquee";
 import Banner from "./components/Banner";
 import UpProducts from "./components/UpProducts";
 import DownProduct from "./components/DownProduct";
+import Product from "./components/Product";
 
 
 export default async function Home() {
@@ -51,6 +52,17 @@ export default async function Home() {
         <div className="grid grid-cols-3 gap-4">
           {decreasedProducts.map((p) => (
             <DownProduct key={p.id} p={p} />
+          ))}
+        </div>
+
+        {/* সব পণ্য */}
+        <h2 className="text-lg font-bold mt-8 mb-3 text-gray-800">
+          সব পণ্য
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {data.map((p) => (
+            <Product key={p.id} p={p} />
           ))}
         </div>
 
