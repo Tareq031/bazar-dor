@@ -6,7 +6,7 @@ const Marquee = async () => {
 
     const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products');
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
 
     return (
         <div>
@@ -17,6 +17,7 @@ const Marquee = async () => {
                             <span>
                                 {d.image}
                                 {d.nameBn}
+                                {d.nameEn}
                                 {d.unit}
                                 {d.dir}
                             </span>
