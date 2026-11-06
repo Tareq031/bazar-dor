@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🛒 বাজার দর (Bazar Dor)
 
-## Getting Started
+বাংলাদেশের নিত্যপ্রয়োজনীয় পণ্যের বাজারদর জানুন সহজেই!
 
-First, run the development server:
+বাজার দর একটি ওয়েব-ভিত্তিক প্ল্যাটফর্ম, যেখানে ব্যবহারকারীরা বাংলাদেশের বিভিন্ন নিত্যপ্রয়োজনীয় পণ্যের বর্তমান বাজারমূল্য দেখতে পারবেন। পাশাপাশি আগের দিনের ও আগের সপ্তাহের দামের সঙ্গে তুলনা করে বাজারদরের পরিবর্তন সম্পর্কে জানতে পারবেন।
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js – React-based web framework
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+React.js – Building interactive user interfaces
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+JavaScript – Application functionality
 
-## Learn More
+Tailwind CSS – Responsive and modern styling
 
-To learn more about Next.js, take a look at the following resources:
+HeroUI – UI components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Better Auth – User authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MongoDB – Database management
 
-## Deploy on Vercel
+REST API – Fetching product and market price data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Product Price Tracking – View the latest prices of essential daily products.
+
+Price Comparison – Compare today's prices with yesterday's and last week's prices.
+
+Product Categories – Browse products by categories such as rice, vegetables, fish, and other essentials.
+
+Product Details – View detailed product information, price history, and market information.
+
+User Authentication – Create an account and securely sign in using Better Auth.
