@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import NavLinks from './NavLinks';
+import Link from 'next/link';
 
 const Header = () => {
 
@@ -23,8 +24,19 @@ const Header = () => {
                 
             </div>
             <div className="flex items-center space-x-2">
-                 <button className="btn">সাইন ইন</button>
-                <button className="btn bg-red-500 text-white">সাইন আপ</button>
+                   <Link
+            href="/sign-in"
+            className="px-4 py-2 text-sm font-semibold text-green-700 border border-green-700 rounded-lg hover:bg-green-50 transition duration-300"
+          >
+            সাইন ইন
+          </Link>
+
+          <Link
+            href="/sign-up"
+            className="px-4 py-2 text-sm font-semibold text-white bg-green-700 rounded-lg shadow-sm hover:bg-green-800 hover:shadow-md transition duration-300"
+          >
+            সাইন আপ
+          </Link>
             </div>
             
         </div>
