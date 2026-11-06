@@ -1,33 +1,35 @@
-import React from 'react';
+import React from "react";
+import Link from "next/link";
 import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
 
 const Marquee = async () => {
+  const res = await fetch(
+    "https://api.api-store.workers.dev/api/bazardor/products",
+    { cache: "no-store" }
+  );
 
-    const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products');
-    const data = await res.json();
-    // console.log(data);
+  if (!res.ok) return null;
 
-    return (
-        <div>
-            <MarqueeText direction="right" duration={10}>
-                {
-                    data.map((d, i) => (
-                        <span key={i}>
-                            <span>
-                                {d.image}
-                                {d.nameBn}
-                                {d.nameEn}
-                                {d.unit}
-                                {d.dir}
-                            </span>
-                            <span className="mx-5"> • </span>
-                        </span>
-                    ))
-                }
-            </MarqueeText>
-        </div>
-    );
+  const data = await res.json();
+
+  return (
+    <div className="bg-green-50 py-3">
+      <MarqueeText direction="right" duration={20}>
+        {data.map((d) => (
+          <Link
+            key={d.id}
+            href={`/product/${d.id}`}
+            className="inline-flex items-center gap-2 mx-5 font-semibold text-gray-700 hover:text-green-600"
+          >
+            {d.image} {d.nameBn}
+            <span className="text-green-700">{d.today} টাকা</span>
+            <span>•</span>
+          </Link>
+        ))}
+      </MarqueeText>
+    </div>
+  );
 };
 
 export default Marquee;

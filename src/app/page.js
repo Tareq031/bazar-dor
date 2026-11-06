@@ -27,7 +27,7 @@ export default async function Home() {
 
   return (
     <div>
-      <Marquee />
+      
       <Banner />
 
       <div className="max-w-7xl mx-auto px-4 py-5">
